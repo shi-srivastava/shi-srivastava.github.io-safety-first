@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>National Safety Month</title>
+    <style>
+        :root {
+            --safety-yellow: #FFCC00;
+            --safety-orange: #FF6600;
+            --dark-metal: #1A1A1A;
+            --steel-gray: #333333;
+            --light-gray: #F4F4F4;
+            --white: #FFFFFF;
+            --engage-blue: #005A9C;
+            --empower-green: #007A33;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-metal);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Caution Tape */
+        .caution-tape {
+            height: 12px;
+            background: repeating-linear-gradient(45deg,
+                    var(--safety-yellow),
+                    var(--safety-yellow) 15px,
+                    var(--dark-metal) 15px,
+                    var(--dark-metal) 30px);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--dark-metal);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 15px;
+            border-bottom: 4px solid var(--safety-orange);
+        }
+
+        header h1 {
+            color: var(--safety-yellow);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Mobile-First Container */
+        .container {
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 100%;
+        }
+
+        /* Safety Panels */
+        .panel {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 2px solid var(--steel-gray);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-header {
+            padding: 15px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .panel-header h2 {
+            font-size: 1.4rem;
+        }
+
+        .panel-header p {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        .panel-1 .panel-header {
+            background-color: var(--engage-blue);
+        }
+
+        .panel-2 .panel-header {
+            background-color: var(--safety-orange);
+        }
+
+        .panel-3 .panel-header {
+            background-color: var(--empower-green);
+        }
+
+        /* Panel Images */
+        .panel-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .panel-body {
+            padding: 20px 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-body h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--steel-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 5px;
+        }
+
+        /* Action Lists */
+        .action-list {
+            list-style: none;
+        }
+
+        .action-list li {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            line-height: 1.4;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .action-list li::before {
+            content: '⚙️';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.9rem;
+        }
+
+        .action-list strong {
+            display: block;
+            color: var(--dark-metal);
+            margin-bottom: 2px;
+        }
+
+        /* Impact Statements */
+        .impact {
+            margin-top: auto;
+            padding: 15px;
+            background-color: var(--light-gray);
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            border-left: 4px solid var(--dark-metal);
+        }
+
+        /* Desktop Scaling */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                max-width: 1200px;
+                margin: 0 auto;
+                align-items: stretch;
+            }
+
+            .panel {
+                flex: 1;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="caution-tape"></div>
+
+    <header>
+        <h1>👷‍♂️👷‍♀️ National Safety Month 🏭</h1>
+        <p>Core Operational Mandates</p>
+    </header>
+
+    <div class="container">
+
+        <div class="panel panel-1">
+            <div class="panel-header">
+                <h2>1️⃣ Engage (जोड़ें)</h2>
+                <p>Involve every employee in safety activities.</p>
+            </div>
+            <img src="Encourage.jpeg" alt="Engage Protocol"
+                class="panel-image">
+            <div class="panel-body">
+                <h3>Key Actions</h3>
+                <ul class="action-list">
+                    <li>
+                        <strong>Conducting: Daily Toolbox Talks</strong>
+                        Mitigate workplace risks effectively.
+                    </li>
+                    <li>
+                        <strong>Appointing: Safety Representatives</strong>
+                        Drive department-level safety initiatives.
+                    </li>
+                    <li>
+                        <strong>Encouraging: Worker Suggestions</strong>
+                        Foster proactive safety ideas continuously.
+                    </li>
+                </ul>
+                <div class="impact">
+                    <span>✅</span> When people participate, safety awareness increases.
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-2">
+            <div class="panel-header">
+                <h2>2️⃣ Educate (सिखाएं)</h2>
+                <p>Provide practical safety knowledge for every job role.</p>
+            </div>
+            <img src="Educate.jpeg" alt="Educate Protocol"
+                class="panel-image">
+            <div class="panel-body">
+                <h3>Key Actions</h3>
+                <ul class="action-list">
+                    <li>
+                        <strong>Providing: Role-Based Training</strong>
+                        Deliver practical safety knowledge directly.
+                    </li>
+                    <li>
+                        <strong>Utilizing: Multimedia Learning</strong>
+                        Deploy videos and classroom training.
+                    </li>
+                    <li>
+                        <strong>Conducting: Emergency Drills</strong>
+                        Prepare teams for fire hazards.
+                    </li>
+                </ul>
+                <div class="impact">
+                    <span>✅</span> Knowledge helps prevent accidents before they happen.
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-3">
+            <div class="panel-header">
+                <h2>3️⃣ Empower (सशक्त बनाएं)</h2>
+                <p>Give employees authority and tools to act safely.</p>
+            </div>
+            <img src="https://via.placeholder.com/600x300/007A33/FFFFFF?text=Empower+Team" alt="Empower Protocol"
+                class="panel-image">
+            <div class="panel-body">
+                <h3>Key Actions</h3>
+                <ul class="action-list">
+                    <li>
+                        <strong>Authorizing: Work Stoppage</strong>
+                        Grant rights to halt hazards.
+                    </li>
+                    <li>
+                        <strong>Fostering: No-Blame Reporting</strong>
+                        Encourage transparent near-miss documentation.
+                    </li>
+                    <li>
+                        <strong>Ensuring: Equipment Availability</strong>
+                        Supply PPE and LOTO tools.
+                    </li>
+                </ul>
+                <div class="impact">
+                    <span>✅</span> Empowered employees create a safer workplace.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="caution-tape"></div>
+
+</body>
+
+</html>
